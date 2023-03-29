@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+
+<launch>
+    <rosparam command="load" file = "$(find ex2_custom_msg)/conf/sin_param.yaml" />
+    
+    <node pkg ="ex2_custom_msg" name = "publisher" type ="publisher" output = "screen">
+    </node>
+
+    <node pkg ="ex2_custom_msg" name = "filter_subscriber" type = "filter_subscriber" output = "screen">
+    </node>
+
+</launch>
